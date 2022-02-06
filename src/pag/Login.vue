@@ -6,14 +6,22 @@
             <input type="email" name="email" placeholder="digite seu email">
             <label for="password">Senha:</label>
             <input type="password" name="password" placeholder="digite sua senha">
-            <button>Entrar</button>
+            <button type="submit">Entrar</button>
             <p>Esqueceu seu <span>Email</span>? Esquece sua <span>senha?</span></p>
         </form>
     </div>
 </template>
 <script>
 export default {
-    name: 'Login'
+    name: 'Login',
+
+    date: () => {
+        return{
+            usuario: {
+
+            }
+        }
+    }
 }
 </script>
 

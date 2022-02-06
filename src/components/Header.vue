@@ -40,7 +40,7 @@ export default {
             'Cadastre-se'
         ],
 
-        titulo: 'GreenLand',
+        titulo: 'Green House Skate',
 
         menu: [
             'home',
@@ -93,7 +93,10 @@ export default {
 .container .nav-top .login li .link {
     font-size: .8rem;
     color: var(--green);
-    cursor: pointer;
+    cursor: pointer;    
+
+    text-decoration: underline var(--green);
+    
 
     border-radius: .5rem; 
     padding: .5rem 1.5rem; 
@@ -160,6 +163,7 @@ export default {
 .container .nav-principal .menu li .link {
     font-weight: bold;
     font-size: 1rem;
+    
     color: var(--green);
     
     margin-right: 1rem;

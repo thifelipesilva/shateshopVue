@@ -10,10 +10,10 @@
                 <img src="../assets/img/carrousel/img-2.jpg" alt="">
             </slide>
             <slide class="slide">
-                <img src="../assets/img/carrousel/img-2.jpg" alt="">
+                <img src="../assets/img/carrousel/img-3.jpg" alt="">
             </slide>
             <slide class="slide">
-                <img src="../assets/img/carrousel/img-2.jpg" alt="">
+                <img src="../assets/img/carrousel/img-4.jpg" alt="">
             </slide>
 
         </carousel>

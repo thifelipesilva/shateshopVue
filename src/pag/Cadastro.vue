@@ -1,23 +1,48 @@
 <template>
     <div class="cadastro">
         <h2 class="title">Cadastro</h2>
-        <form action="" class="form">
+        <form action="" class="form" @submit.prevent="enviaForm">
             <label for="name">Nome</label>
-            <input type="text" name="name" placeholder="Nome Completo">
+            <input type="text" name="name" placeholder="Nome Completo" v-model="user.nome">
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Digite seu e-mail">
+            <input type="email" name="email" placeholder="Digite seu e-mail" v-model="user.email">
             <label for="phone">Telefone | WhatsApp</label>
-            <input type="tel" name="phone" placeholder="Digite seu Telefone">
+            <input type="tel" name="phone" placeholder="Digite seu Telefone" v-model="user.phone">
             <label for="senha">Senha</label>
-            <input type="password" name="senha" placeholder="Digite sua senha">
+            <input type="password" name="senha" placeholder="Digite sua senha" v-model="user.senha">
             <label for="senha">Confirmar Senha</label>
-            <input type="password" name="senha" placeholder="Confirme sua senha">
+            <input type="password" name="senha" placeholder="Confirme sua senha" v-model="user.confSenha">
 
-            <button>Cadastrar</button>
+            <button type="submit">Cadastrar</button>
 
         </form>
     </div>
 </template>
+<script>
+import axios from 'axios';
+
+export default {
+    data: () => {
+        return {
+            user: {
+                nome: '',
+                email: '',
+                phone: '',
+                senha: '',
+                confSenha: ''
+            }
+        }
+    },
+    methods: {
+        enviaForm () {
+            axios
+                .post("http://localhost:8000/auth/register", this.usuario)
+                .then(resposta => console.log(resposta))
+                .catch(erro => console.log(erro));
+        }
+    }
+}
+</script>
 <style scoped>
 
 .cadastro {
